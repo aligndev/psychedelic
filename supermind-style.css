@@ -896,8 +896,175 @@ body.psy-post-color-set-6 .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon:
 body.psy-post-color-set-6 .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon::after {
 	border-color: #F30000;
 }
+
+
+/* Page Listical */
+body header.active .psy-header-wrapper .psy-header-logo-wrapper
+ {
+	background-image: url(/wp-content/themes/supermind-base/assets/media/psy-pageList-header-logo.svg);
+}
+header.active .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon:before, 
+header.active .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon:after,
+header.active .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon {
+	border-color: #EFDF82;
+}
+.psy-top-people-main-content-wrapper {}
+.wp-block-greenshift-blocks-querygrid .gspbgrid_list_builder .gspbgrid_item {
+	position: static;
+}
+.psy-top-people {
+
+}
+.psy-top-people-header-wrapper {
+    padding-top: 10rem !important;
+    padding-bottom: 2rem !important;
+	height: auto;
+	transition: all 0.5s linear;
+}
+.psy-top-people-header-wrapper.active {
+    padding-top: 5rem !important;
+    padding-bottom: 2rem !important;
+	position: fixed !important;
+    z-index: 99;
+    top: 0;
+    width: 100vw;
+	z-index: 3 !important;
+}
+.psy-top-people-header-wrapper.active .psy-top-people-header-content {
+	/* display: none; */
+	height: 0 !important;
+	padding-bottom: 0 !important;
+	overflow: hidden;
+}
+.psy-top-people-extra-content {
+	width: 100vw;
+    position: relative !important;
+    /* left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw; */
+	/* left: 0; */
+    /* bottom: 0; */
+	display: none;
+	padding: 3vw 10vw;
+    margin-top: 2rem;
+	z-index: 3;
+}
+.psy-top-people-extra-content.active {display: block;}
+
+/* Page Listical Single Page */
+.page-id-2799{background-color: #FFFCF6;}
+
+
 /* MEDIA QUERIES */
 @media only screen and (min-width: 0px) {}
+
+/* desktop */
+@media only screen and (min-width: 1024px) {
+		/* Homepage */
+	body.gspb-bodyfront #gspb_container-id-gsbp-bf104980-18eb.gspb_container {
+		width: auto;
+		min-width: 0;
+	}
+}
+
+@media only screen and (max-width: 769px) {
+
+	header .psy-container {
+		padding: 0 20px;
+	}
+	header .psy-container.psy-header-wrapper {
+		width: 100vw !important;
+	}
+	.psy-header-menu .gspb_slidingPanel-inner .wp-block-greenshift-blocks-row>.gspb_row__content {
+		padding-top: 250px;
+	}
+	.psy-header-menu .gspb_slidingPanel-inner {
+		height: auto;
+	}
+	.psy-header-menu .gspb_slidingPanel-inner .gspb_row__content .gspb_row__col--9 {
+		height: auto;
+	}
+	body .psy-header-wrapper .psy-header-logo-wrapper {
+		height: 60px;
+		width: 240px;
+		background-position: center;
+	}
+	/* Post style */
+	.psy-post-wrapper {
+		min-height: auto !important;
+	}
+	.psy-home-article-container {
+		width: auto !important;
+	}
+	
+	.psy-reallycap-info a,
+	.psy-reallycap-info a {
+		font-size: 13px;
+		font-family: Inter, sans-serif;
+	}
+	
+	.psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper,
+	.psy-left-top-layout .psy-home-article-container .psy-home-article-wrapper,
+	.psy-left-bottom-layout .psy-home-article-container .psy-home-article-wrapper,
+	.psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper {
+		width: 100%
+	}
+	.psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper h3, .psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper div.gspb_meta_value, .psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper .gspb_iconBox, .psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper h3, .psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper div.gspb_meta_value, .psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper .gspb_iconBox {
+		text-align: left !important;
+	}
+	
+	.psy-left-bottom-layout .psy-home-article-container .psy-home-article-wrapper,
+	.psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper {
+		padding-top: 20px;
+	}
+
+	body.home .psy-post-darkmode *,
+	body.home .psy-post-lightmode *,
+	body.home .psy-post-color-set-1 *,
+	body.home .psy-post-color-set-2 *,
+	body.home .psy-post-color-set-3 *,
+	body.home .psy-post-color-set-4 *,
+	body.home .psy-post-color-set-5 *,
+	body.home .psy-post-color-set-6 * {
+		color: #fff !important;
+	}
+
+
+	.wp-block-navigation-item.wp-block-navigation-link {
+		max-height: 100px;
+	}
+	ul.wp-block-navigation__container li a {
+		padding-bottom: 0;
+	}
+	.psy-post-feature-image img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	 }
+
+
+	 /* Changing header color in Article */
+
+	body.psy-post-color-set-1 .psy-header-wrapper .psy-header-logo-wrapper {
+		background-image: url(/wp-content/themes/supermind-base/assets/media/psychedelic-mobile-logo-1.svg);
+	}
+	body.psy-post-color-set-2 .psy-header-wrapper .psy-header-logo-wrapper {
+		background-image: url(/wp-content/themes/supermind-base/assets/media/psychedelic-mobile-logo-6.svg);
+	}
+	body.psy-post-color-set-3 .psy-header-wrapper .psy-header-logo-wrapper {
+		background-image: url(/wp-content/themes/supermind-base/assets/media/psychedelic-mobile-logo-5.svg);
+	}
+	body.psy-post-color-set-4 .psy-header-wrapper .psy-header-logo-wrapper {
+		background-image: url(/wp-content/themes/supermind-base/assets/media/psychedelic-mobile-logo-3.svg);
+	}
+	body.psy-post-color-set-5 .psy-header-wrapper .psy-header-logo-wrapper {
+		background-image: url(/wp-content/themes/supermind-base/assets/media/psychedelic-mobile-logo-4.svg);
+	}
+	body.psy-post-color-set-6 .psy-header-wrapper .psy-header-logo-wrapper {
+		background-image: url(/wp-content/themes/supermind-base/assets/media/psychedelic-mobile-logo-2.svg);
+	}
+}
 
 /* big phone */
 @media only screen and (max-width: 600px) {
@@ -943,67 +1110,8 @@ body.psy-post-color-set-6 .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon:
 
 	header .psy-container {
 		max-width: 100%;
-		position: absolute !important;
+		/* position: absolute !important; */
 	}
-}
-
-
-/* tablet */
-@media only screen and (max-width: 768px) {
-	.psy-post-wrapper {
-		min-height: auto !important;
-	}
-	.psy-home-article-container {
-		width: auto !important;
-	}
-
-	.psy-reallycap-info a,
-	.psy-reallycap-info a {
-		font-size: 13px;
-		font-family: Inter, sans-serif;
-	}
-
-	.psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper,
-	.psy-left-top-layout .psy-home-article-container .psy-home-article-wrapper,
-	.psy-left-bottom-layout .psy-home-article-container .psy-home-article-wrapper,
-	.psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper {
-		width: 100%
-	}
-	.psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper h3, .psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper div.gspb_meta_value, .psy-right-top-layout .psy-home-article-container .psy-home-article-wrapper .gspb_iconBox, .psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper h3, .psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper div.gspb_meta_value, .psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper .gspb_iconBox {
-		text-align: left !important;
-	}
-
-	.psy-left-bottom-layout .psy-home-article-container,
-	.psy-left-top-layout .psy-home-article-container {
-		/* align-items: flex-start !important; */
-	}
-
-	.psy-left-bottom-layout .psy-home-article-container .psy-home-article-wrapper,
-	.psy-right-bottom-layout .psy-home-article-container .psy-home-article-wrapper {
-		padding-top: 20px;
-	}
-
-	.psy-post-wrapper .psy-home-readtime {font-size: 13px !important}
-
-	.psy-post-darkmode * {color: #fff !important;}
-	.psy-post-lightmode *{color: #fff !important;}
-
-	.psy-post-color-set-1 *{color: #fff !important;}
-	.psy-post-color-set-2 *{color: #fff !important;}
-	.psy-post-color-set-3 *{color: #fff !important;}
-
-	.wp-block-navigation-item.wp-block-navigation-link {
-		max-height: 100px;
-	}
-	ul.wp-block-navigation__container li a {
-		padding-bottom: 0;
-	}
-	.psy-post-feature-image img {
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	 }
-
 }
 
 @media only screen and (max-width: 500px) {
@@ -1013,8 +1121,7 @@ body.psy-post-color-set-6 .psy-header-menu>.gspb-buttonbox .gspb-buttonbox-icon:
 		font-family: Inter, sans-serif;
 	}
 }
-/* desktop */
-@media only screen and (min-width: 1024px) {}
+
 
 /*  small laptop sizes */
 @media only screen and (min-height: 0px) and (max-height: 900px) {}

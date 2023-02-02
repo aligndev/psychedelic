@@ -383,25 +383,69 @@ function whichElinViewportHomepage () {
       if (isViewport == true) {
         elInViewport = el.classList[6];
       } 
-      // if (shouldSkip) {
-      //   return;
-      // } else {
-      //   bounding = el.getBoundingClientRect();
-      //   myElementHeight = el.offsetHeight;
-      //   myElementWidth = el.offsetWidth;
-      //   isViewport = elementInViewport(el);
-      //   articleHomeBody.classList.remove(el.classList[6]);
-      //   if (isViewport == true) {
-      //     elInViewport = el.classList[6];
-      //   } 
-      //   shouldSkip = true;
-      //   return
-      // }
     })
     articleHomeBody.classList.add(elInViewport);
   }
 }
 
+// Top people header
+
+let headerFilter = document.querySelector('.psy-top-people-header-filter');
+let headerListWrapper = document.querySelector('.psy-top-people-header-wrapper');
+let listPageHeader = document.querySelector('header');
+
+function stickyFilterTopPeople () {
+  let scroll = window.scrollY;
+  if (scroll > headerFilter.offsetTop - 70) {
+    // headerFilter.classList.add("active");
+    headerListWrapper.classList.add("active");
+    listPageHeader.classList.add('active');
+  } else if (scroll == 0) {
+    if (headerListWrapper.classList.contains("active")) {
+      headerListWrapper.classList.remove("active");
+      listPageHeader.classList.remove('active');
+    }
+  }
+}
+stickyFilterTopPeople ();
+
+let peopleBlock = document.querySelectorAll('.psy-top-people-block');
+let extraContent;
+
+
+function removeExtraContent () {
+if (peopleBlock) {
+  peopleBlock.forEach((el) => {
+    extraContent = el.querySelector('.psy-top-people-extra-content');
+    if (extraContent.classList.contains('active')) {
+      extraContent.classList.remove('active');
+
+    }
+  })
+}
+}
+function topPeopleExtraContent () {
+  let peopleExtraContent;
+  if (peopleBlock) {
+    peopleBlock.forEach(el => {
+
+      peopleExtraBlock = el.querySelector('.psy-top-people-extra-content')
+      peopleExtraBlock.style.left = -el.offsetLeft + 'px';
+      el.addEventListener('click', ()=> {
+        peopleExtraContent = el.querySelector('.psy-top-people-extra-content');
+        
+        // console.log(peopleExtraContent);
+        if (peopleExtraContent.classList.contains('active')) {
+          peopleExtraContent.classList.remove('active');
+        } else {
+          removeExtraContent();
+          peopleExtraContent.classList.add('active');
+        }
+      })
+    });
+  }
+}
+topPeopleExtraContent();
 
 window.addEventListener("load", () => {
   console.log("Supermind scripts is running");
@@ -421,4 +465,6 @@ window.addEventListener("scroll", () => {
   glossaryExpandFn();
   whichElementInViewport();
   whichElinViewportHomepage () ;
+
+  stickyFilterTopPeople ();
 });
